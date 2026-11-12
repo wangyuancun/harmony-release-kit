@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "应用主模块（模板占位）"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "应用入口（模板占位）"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "应用模板"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "modelVersion": "5.0.0",
+  "name": "harmony-app-template",
+  "version": "1.0.0",
+  "description": "HarmonyOS 应用上架模板：工程骨架 + 签名 + 出包 + 上架文档",
+  "main": "",
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {}
+}

@@ -1,0 +1,49 @@
+{
+  "app": {
+    // 本工程故意不配置 signingConfigs：
+    // hvigor 的 signingConfigs 口令字段只接受 DevEco Studio 用 material/ 密钥材料
+    // 加密出的密文，且解密后会把明文口令作为 -keystorePwd / -keyPwd 传给 java 子进程。
+    // 命令行签名请统一走 signing/sign-release.sh（口令只在内存、不落盘、不进 argv）。
+    // 若改用 IDE 签名：File > Project Structure > Project > Signing Configs 手动配置。
+    "signingConfigs": [],
+    "products": [
+      {
+        "name": "default",
+        // 上架包必须用 Release 版 SDK 构建；版本号按本机实际安装的 SDK 修改。
+        // Beta SDK 会把 pack.info 的 releaseType 写成 Beta1，审核会被驳回。
+        "compileSdkVersion": "26.0.0",
+        "compatibleSdkVersion": "26.0.0",
+        "targetSdkVersion": "26.0.0",
+        "runtimeOS": "HarmonyOS",
+        "buildOption": {
+          "strictMode": {
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true
+          }
+        }
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug"
+      },
+      {
+        "name": "release"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}

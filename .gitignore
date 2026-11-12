@@ -1,0 +1,25 @@
+# 构建产物与 IDE 缓存
+/node_modules
+/oh_modules
+/local.properties
+/.idea
+**/build
+/.hvigor
+.cxx
+/.clangd
+/.clang-format
+/.clang-tidy
+**/.test
+/.appanalyzer
+
+# 签名材料绝对不要提交（本模板仓不含任何真实证书/口令）
+/signing/*.p12
+/signing/*.cer
+/signing/*.p7b
+/signing/*.csr
+/signing/*.jks
+/signing/verify/
+*.keystore
+
+# 系统垃圾
+.DS_Store
